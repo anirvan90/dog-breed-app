@@ -3,3 +3,5 @@
 data/
 labels.csv
 *.zip
+model.json
+model.h5
