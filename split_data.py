@@ -21,4 +21,4 @@ def split(train_path, split_pct):
         os.chdir(current_dir)
 
 
-split('./data/train', 3)
+split('./data/train', 10)
