@@ -5,7 +5,7 @@ def move_file(num_files, path, breed):
     os.chdir(path)
     dest = '../../valid/' + breed
     os.system(
-        'ls | gshuf -n ' + str(num_files) + ' | xargs -I {} mv {} ' + dest)
+        'ls | shuf -n ' + str(num_files) + ' | xargs -I {} mv {} ' + dest)
 
 
 def split(train_path, split_pct):
