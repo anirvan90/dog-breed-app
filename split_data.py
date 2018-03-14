@@ -10,15 +10,15 @@ def move_file(num_files, path, breed):
 
 def split(train_path, split_pct):
     for breed in os.listdir(train_path):
-        if not os.path.exists('./data/valid/' + breed):
-            os.mkdir('./data/valid/' + breed)
+        if not os.path.exists('./data/new_set/valid/' + breed):
+            os.mkdir('./data/new_set/valid/' + breed)
 
-        train_dirs = os.listdir('./data/train/' + breed)
+        train_dirs = os.listdir(train_path + breed)
         num_files = len(train_dirs) // split_pct
         current_dir = os.getcwd()
-        path = './data/train/' + breed
+        path = train_path + breed
         move_file(num_files, path, breed)
         os.chdir(current_dir)
 
 
-split('./data/train', 10)
+split('./data/new_set/train/', 10)
